@@ -11,47 +11,4 @@
     <string name="register">Register</string>
     <string name="sudah_punya_akun">Sudah punya akun ?</string>
     <string name="username">Username</string>
-    <string-array name="data_name">
-            <item>The Undefeatable Swordsman</item>
-            <item>Chronicles of The Demon Faction</item>
-            <item>Mist, Might, Mayhem</item>
-            <item>Return of The Mount Hua Sect</item>
-            <item>The Novels Extra</item>
-            <item>The World After The Fall</item>
-            <item>Eleceed</item>
-            <item>The Wind Spell</item>
-            <item>The Greatest Estate Developer</item>
-            <item>Trash of The Counts Family</item>
-            <item>Omniscient reader</item>
-            <item>Youth of Revelation</item>
-        </string-array>
-        <string-array name="data_description">
-            <item>Seorang pemuda lemah dengan pikiran sederhana tiba-tiba memperoleh kekuatan luar biasa setelah pertemuan misterius, mengubah nasibnya sebagai pendekar.</item>
-            <item>Seorang murid lemah dari sekte iblis terlahir kembali dan bertekad membawa kejayaan bagi faksi iblis yang telah lama jatuh. </item>
-            <item>Dunia diselimuti kabut misterius yang memunculkan monster, dan para penyihir harus bertarung mempertahankan umat manusia.</item>
-            <item>Pendekar legendaris dari sekte Mount Hua bereinkarnasi setelah ratusan tahun untuk mengembalikan kejayaan sektenya yang telah runtuh.</item>
-            <item>Seorang penulis mendapati dirinya terjebak di dalam novel ciptaannya sendiri sebagai karakter sampingan dan harus bertahan hidup dengan pengetahuannya tentang cerita.</item>
-            <item>Setelah menolak mengikuti “Menara,” seorang pria tetap bertarung sendirian melawan monster selama bertahun-tahun di dunia yang hancur.</item>
-            <item>Jiwoo, pemuda berhati baik dengan kecepatan super, bekerja sama dengan guru kuat dalam wujud kucing untuk melindungi dunia dari pengguna kekuatan jahat.</item>
-            <item>Seorang penyihir muda dengan kekuatan angin berusaha membuktikan dirinya dalam dunia penuh sihir dan konflik.</item>
-            <item>Insinyur modern terbangun dalam tubuh bangsawan yang ceroboh dan menggunakan ilmunya untuk membangun kerajaan impian.</item>
-            <item>Cale, karakter “sampah” dalam novel, bertekad hidup damai dengan memanfaatkan pengetahuannya tentang masa depan.</item>
-            <item>Seorang pembaca setia mendapati dunia novel favoritnya menjadi nyata dan ia menjadi satu-satunya yang tahu bagaimana segalanya akan berlangsung.</item>
-            <item>Sekelompok pemuda dengan kekuatan misterius berjuang menghadapi rahasia besar yang dapat mengubah dunia.</item>
-        </string-array>
-        <integer-array name="data_photo">
-            <item>@drawable/satu</item>
-            <item>@drawable/dua</item>
-            <item>@drawable/tiga</item>
-            <item>@drawable/empat</item>
-            <item>@drawable/lima</item>
-            <item>@drawable/enam</item>
-            <item>@drawable/tujuh</item>
-            <item>@drawable/delapan</item>
-            <item>@drawable/sembilan</item>
-            <item>@drawable/sepuluh</item>
-            <item>@drawable/sebelas</item>
-            <item>@drawable/duabelas</item>
-        </integer-array>
-
 </resources>

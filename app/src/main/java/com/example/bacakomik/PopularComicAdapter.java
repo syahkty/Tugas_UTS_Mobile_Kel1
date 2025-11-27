@@ -9,14 +9,45 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
+import java.util.ArrayList; // Import ini diperlukan
 
 public class PopularComicAdapter extends RecyclerView.Adapter<PopularComicAdapter.ViewHolder> {
 
-    private List<Komik> comicList;
+    private List<Komik> komikList;
+
+    // 1. Tambahkan variabel untuk menampung Callback
+    private OnItemClickCallback onItemClickCallback;
+
+    // 2. Tambahkan method Setter agar Fragment bisa memasang aksinya
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
 
     public PopularComicAdapter(List<Komik> comicList) {
-        this.comicList = comicList;
+        // Jika list yang masuk null, inisialisasi dengan list kosong
+        this.komikList = comicList != null ? comicList : new ArrayList<>();
+    }
+
+    // --- METODE YANG HILANG (PENTING UNTUK MVVM) ---
+    /**
+     * Metode untuk menerima data baru (List<Komik>) dari ViewModel/Firebase
+     * dan memperbarui tampilan RecyclerView.
+     */
+    public void setKomikList(List<Komik> newList) {
+        // 1. Ganti list data lama dengan yang baru
+        this.komikList = newList;
+
+        // 2. Beri tahu RecyclerView bahwa data telah berubah
+        notifyDataSetChanged();
+    }
+    // ------------------------------------------------
+
+    // 3. Tambahkan Interface
+    public interface OnItemClickCallback {
+        void onItemClicked(Komik data);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -46,19 +77,34 @@ public class PopularComicAdapter extends RecyclerView.Adapter<PopularComicAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Komik komik = comicList.get(position);
+        Komik komik = komikList.get(position);
 
-        holder.tvRank.setText(String.valueOf(position + 1));
+        // PENTING: Implementasi data binding dan Glide
 
+        // Pemuatan Gambar dari URL (Firebase)
+        Glide.with(holder.itemView.getContext())
+                .load(komik.getCoverUrl())
+                .into(holder.ivCover);
+
+        // Binding data lainnya
         holder.tvTitle.setText(komik.getJudul());
-        holder.tvGenres.setText(komik.getDeskripsi());
-        holder.ivCover.setImageResource(komik.getGambar());
+        // holder.tvGenres.setText(komik.getGenres()); // Jika ada field genres
+         holder.tvRank.setText(String.valueOf(position + 1)); // Untuk rank
 
-        holder.ratingBar.setRating(4.5f);
+        // 4. Tambahkan Listener pada itemView
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemClickCallback != null) {
+                    onItemClickCallback.onItemClicked(komikList.get(holder.getAdapterPosition()));
+                }
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return comicList.size();
+        // Pastikan tidak terjadi NullPointerException
+        return komikList != null ? komikList.size() : 0;
     }
 }

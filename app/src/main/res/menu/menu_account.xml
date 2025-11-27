@@ -1,19 +1,14 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_edit_profile"
-        android:title="Edit Profil"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_settings"
-        android:title="Pengaturan"
-        app:showAsAction="never" />
+        android:id="@+id/action_about"
+        android:title="Tentang Aplikasi"
+        android:icon="@android:drawable/ic_menu_info_details" />
 
     <item
         android:id="@+id/action_logout"
-        android:title="Keluar"
-        app:showAsAction="never" />
+        android:title="Keluar / Logout"
+        android:icon="@android:drawable/ic_lock_power_off" />
 
 </menu>

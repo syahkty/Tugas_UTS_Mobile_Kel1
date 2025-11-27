@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1063855982472",
+    "project_id": "yomu-74eb0",
+    "storage_bucket": "yomu-74eb0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063855982472:android:bd0cb0e9d1b36b6d63dc3d",
+        "android_client_info": {
+          "package_name": "com.example.bacakomik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063855982472-7vh0vmrul1obigbcqieg3j4gbmer3q4d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bacakomik",
+            "certificate_hash": "8a41c4e09b5d5577d3bcc22e2e36d86fb9118e67"
+          }
+        },
+        {
+          "client_id": "1063855982472-9o8qrhopoei1v9eano7e6r0h6d9s7l6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCap0Ionb39KTjCSLuBxilZmKMaO6Z4Zto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063855982472-9o8qrhopoei1v9eano7e6r0h6d9s7l6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
